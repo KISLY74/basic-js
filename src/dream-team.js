@@ -14,13 +14,15 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function createDreamTeam(members) {
-  //if (typeof (members) !== "string") return false
   for (var i in members) {
     if (typeof (members[i]) !== "string") {
       delete members[i]
     }
+    else {
+      members[i] = members[i].trim()
+    }
   }
   members = members.map(elem => elem[0])
-  members = members.sort().join("")
+  members = members.sort().join("").toUpperCase()
   return members
 }
