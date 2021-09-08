@@ -16,7 +16,7 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default function countCats(matrix) {
   matrix = matrix.flat()
-  var count = null
+  var count = 0
   for (var i in matrix) {
     if (matrix[i] === "^^") {
       count++
