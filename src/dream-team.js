@@ -20,9 +20,10 @@ export default function createDreamTeam(members) {
     }
     else {
       members[i] = members[i].trim()
+      members[i] = members[i].toUpperCase()
     }
   }
   members = members.map(elem => elem[0])
-  members = members.sort().join("").toUpperCase()
+  members = members.sort().join("")
   return members
 }
