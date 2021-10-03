@@ -14,6 +14,9 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function createDreamTeam(members) {
+  if (!Array.isArray(members)){
+    return false
+  }
   for (var i in members) {
     if (typeof (members[i]) !== "string") {
       delete members[i]
